@@ -1,0 +1,675 @@
+         /* *{
+     margin: auto 0;
+ } */
+     /* body */
+   
+ 
+
+     body {
+        background: #0f0c29;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+     }
+     /* Navigation bar */
+     
+     nav {
+         z-index: 5;
+         position: fixed;
+         /* Set the navbar to fixed position */
+         top: 0;
+         width: 100%;
+         background-color: #000000;
+         border-bottom-left-radius: 5px;
+         border-bottom-right-radius: 5px;
+         position: fixed;
+         left: -2px;
+     }
+     
+     nav,
+     .right,
+     .left,
+     .home,
+     .podcast,
+     .lib {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+     }
+     
+     .fa-microphone,
+     .fa-search {
+         color: gray;
+     }
+     
+     .fa-house,
+     .fa-podcast,
+     .fa-headphones {
+         /* position: relative;
+    top: -1vh; */
+         margin-right: 1vw;
+         cursor: pointer;
+     }
+
+    nav h3{
+        cursor: pointer;
+    }
+     
+     .home,
+     .podcast,
+     .lib {
+         width: 20%;
+     }
+
+    nav a{
+         text-decoration: none;
+         color: #fff;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+     }
+     
+     .left {
+         width: 35%;
+         padding: 1%;
+         float: left;
+     }
+
+     .left .fa:hover{
+        color:rgb(22, 50, 175);
+     }
+     /* Right part of the nav bar */
+     
+     .right {
+         color: white;
+         width: 30%;
+         align-items: center;
+         justify-content: space-evenly;
+         align-content: space-around;
+         padding: 1%;
+         float: right;
+     }
+     /* PERSONAL IMAGE */
+     
+     .person img {
+         width: 5.5vh;
+         height: 5.5vh;
+         border-radius: 50%;
+     }
+     /* Search bar */
+     
+     .search-bar {
+         background-color: whitesmoke;
+         padding: 5px 15px 5px 15px;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+
+     .fa-search:hover{
+        color: red;
+        font-size: 1.5rem;
+     }
+
+     .fa-microphone:hover{
+         color: rgb(22, 50, 175);
+         font-size: 1.5rem;
+     }
+
+     .fa-bell:hover{
+        animation: bell;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        color: yellow;
+     }
+     @keyframes bell{
+         from{
+            transform: rotate(20deg);
+        }
+        25%{
+            transform: rotate(-20deg);
+        }
+        50%{
+            transform: rotate(20deg);
+        }
+        75%{
+            transform: rotate(-20deg);
+        }
+         to{
+            transform: rotate(0deg);
+         }
+     }
+     input {
+         outline-style: none;
+         border: none;
+         background-color: transparent;
+     }
+     
+      ::placeholder {
+         padding: 10px;
+         color: gray;
+     }
+     /* VIEWABLEE AREA */
+     
+     #container {
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-start;
+         position: relative;
+         bottom: 10vh;
+         top: 15vh;
+     }
+     /* MAIN SECTION */
+     
+     #main {
+         color: #ffffff;
+         display: ;
+         margin: 0;
+         width: 70vw;
+         /* background-color: aliceblue; */
+         position: relative;
+         height: 250vh;
+         margin-bottom: 10vh;
+     }
+     /* Main body */
+     
+     .main-content {
+         width: 100%;
+         min-height: 200vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         align-content: center
+     }
+     /* Crausole */
+     
+     #slider {
+         width: 80%;
+         min-height: 60vh;
+         max-height: 70vh;
+         background-color: #9aacb9;
+         margin: 0 0;
+         overflow: hidden;
+     }
+
+     #slider figure{
+         width: 500%;
+         height: 100%;
+         position: relative;
+         left: 0;
+         margin:0;
+         animation: slider;
+         animation-duration: 20s;
+         animation-timing-function: ease;
+         animation-delay: 5ms;
+         animation-iteration-count: infinite;
+     }
+   
+     #slider img {
+         width: 20%;
+         min-height: 100%;
+         float: left;
+     }
+
+     @keyframes slider{
+         0%{ 
+             left:0;
+            }
+        20%{
+            left: 0%;
+        }
+        25%{ 
+            left:-100%;
+           }
+        45%{
+            left: -100%;
+        }
+        50%{
+            left: -200%;
+        }
+        70%{
+            left: -200%;
+        }
+        75%{
+            left: -300%;
+        }
+        95%{
+            left: -300%;
+        }
+        100%{
+            left: -400%;
+        }
+     }
+     /* Latest Release and Popular artists , Occasional-song &  latest-section, songs-of-choice*/
+     
+     #latest-releases,
+     #podcas,
+     #artist,
+     #songs-of-choice,
+     #Occasional-song,
+     #latest-section {
+         width: 90%;
+         min-height: 40vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         align-content: flex-start;
+         position: relative;
+         margin: 0;
+     }
+     
+     .scroll {
+         width: 90%;
+         min-height: 25vh;
+         display: flex;
+         overflow-x: scroll;
+         overflow-y: hidden;
+         position: relative;
+     }
+     
+     #artist .scroll .song {
+         border-radius: 50%;
+         
+     }
+     
+     #artist .scroll .song {
+         border-radius: 50%;
+         background-image: none;
+         background-repeat: no-repeat;
+         background-position: right;
+         background-size: cover;
+         border-radius: 50%;
+         box-sizing: content-box;
+     }
+
+     #artist .song img{
+        border-radius: 50%;
+     }
+
+     
+
+     .song img{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+     }
+
+     .song img .icons:hover{
+         opacity: 0.2;
+     }
+     
+     .scroll .song:hover img {
+         opacity: 0.7;
+     }
+
+     .song {
+         color: #fefeff;
+         font-size: large;
+         min-width: 20vh;
+         height: 20vh;
+         line-height: 110px;
+         text-align: center;
+         margin-right: 2.2vw;
+         border-radius: 25px;
+         background-color: whitesmoke;
+         box-sizing: content-box;
+     }
+   
+   
+     .icons {
+         display: none;
+     }
+     
+     .song:hover .icons {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         width: 100%;
+         height: 100%;
+         align-items: center;
+         align-content: center;
+         font-size: 1.5rem;
+         opacity: 1;
+         position: relative;
+         /* top: -25vh; */
+         overflow: hidden;
+     }
+
+    .song:hover .icons{
+        position: relative;
+        top: -26vh;
+     }
+
+     .artist-name{
+         position: relative;
+         color: white;
+         top: -13vh;
+     }
+
+ 
+  
+     .icons .fa {
+         text-align: center;
+         margin: 10px;
+         width: 2vw;
+         height: 2vw;
+         position: relative;
+     }
+     
+     .song:hover .icons i:hover {
+         width: 2.5rem;
+         height: 2.2rem;
+         border-radius: 5px;
+         padding: 4px;
+         /* border-radius: 50%; */
+         font-size: 2rem;
+         opacity: 0.5;
+         color: black;
+         background-color: whitesmoke;
+     }
+     
+     .heading {
+         font-size: 2rem;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         font-weight: bolder;
+         font-style: normal;
+         font-variant: small-caps;
+     }
+     
+     .playlist-content .scroll .song {
+         width: 40vh;
+     }
+
+     #Occasional-song .scroll .song{
+         min-width: 40vh;
+         max-height: 30vh;
+         border-radius: 0px;
+         overflow-y: hidden;
+     }
+     
+     #Occasional-song .scroll .song img{
+        border-radius: 0px;
+     }
+    
+     
+     .fa-house:hover{
+         color: blueviolet;
+     }
+
+     .h{
+         width: 90%;
+         height: fit-content;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items:  center
+     }
+     
+     .controller{
+         width: 30%;
+         height: inherit;
+         display: flex;
+         flex-direction: row;
+         justify-content: flex-end;
+         align-items: baseline;
+     }
+
+     .controller button{
+         margin-left: 2vw;
+     }
+
+
+     .arrow{
+         width: 25%;
+         height: inherit;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         font-size: 25px;
+     }
+
+     .arrow i:hover{
+         color: #9aacb9;
+     }
+      
+     .controller button{
+         min-width: 5vw;
+         height: 4vh;
+         border-radius: 25px;
+         border: 1px solid whitesmoke;
+         background-color: transparent;
+         color: white;
+         font-weight: bolder;
+     }
+
+     .controller button:hover{
+         color:#0f0c29;
+         background-color: whitesmoke;
+     }
+
+     aside {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-around;
+         align-items: center;
+         align-content: space-around;
+         position: relative;
+         width: 30vw;
+         height: 160vh;
+         color: rgb(255, 255, 255);
+     }
+     
+     .playlist-content {
+         max-width: 100%;
+         display: flex;
+         overflow: auto;
+         flex-wrap: wrap;
+         max-height: 80%;
+         position: relative;
+         left: 0;
+     }
+ 
+     .my-fav .fa-heart{
+         font-size: 20px;
+     }
+     .fa-play:hover{
+         font-size: 25px;
+        color: rgb(124, 82, 163)
+     }
+     .myfav {
+         display: inline-block;
+         border: 1px solid white;
+         width: 90%;
+         height: 15vh;
+         margin: 0px;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         align-content: flex-start;
+         position: relative;
+         left: 0;
+         background-color: whitesmoke;
+         color: #fff;
+         margin-top: 10px;
+         background: #0f0c29;  
+         /* fallback for old browsers */
+         background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+         background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+     }
+     
+     .myfav section {
+         text-align: left;
+         position: relative;
+     }
+     
+     .myfav img {
+         position: relative;
+         left: 0;
+         width: 30%;
+         height: 15vh;
+         padding: 2px;
+     }
+     
+     .myfav h2,
+     .myfav h4 {
+         margin: 0%;
+     }
+     
+     .fa-heart{
+         position: relative;
+         right: 1vw;
+        
+     }
+
+     .myfav .fa-heart:hover {
+         color: red;
+         font-size: 25px;
+     }
+     
+     .myfav .fa-heart:active {
+         color: white;
+     }
+     
+     #songs-of-choice .scroll {
+         min-height: 25vh;
+     }
+
+     .advert{
+        width: 23vw;
+        min-height: 50vh;
+        position: relative;
+       top: 10vh;
+     }
+ 
+ 
+
+     /* AUDIO PLAYER */
+     
+    audio{
+        width: 100%;
+        height: 8vh;
+        background-color: #f1f3f4;
+        opacity: 1;
+        position: fixed;
+        bottom: 0;
+        outline: none;
+        left: 0;
+    }
+
+    source{
+        width: 100%;
+        border-radius: 0px;
+        background-color: #000000;
+    }
+
+    
+
+     /* Media Query Section */
+     
+     @media only screen and (max-width: 992px) {
+         .right {
+             width: 40%;
+         }
+         .left {
+             width: 60%;
+         }
+         input[type="search"],
+         .fa-microphone {
+             display: none;
+         }
+         nav h3 {
+             display: none;
+         }
+         .search-bar {
+             background-color: transparent;
+         }
+         .fa-search {
+             color: whitesmoke;
+             font-size: ;
+         }
+         .fa,
+         .fas {
+             font-size: 1.2rem;
+         }
+         .fa-house,
+         .fa-podcast,
+         .fa-headphones {
+             position: relative;
+             left: 4vw;
+         }
+         .person {
+             position: relative;
+             left: 2vw;
+         }
+         /* #playlist {
+             width: 30%;
+         } */
+         #playlist {
+             display: none;
+         }
+         
+         .main-content {
+             width: 100%;
+             height: 260vh;
+         }
+         #main {
+             width: 95vw;
+             left: 0;
+         }
+         #slider{
+             height: 60vh;
+         }
+         
+        }
+         @media only screen and (max-width: 600px) {
+             #playlist {
+                 display: none;
+             }
+             #playlist-ss {
+                 display: block;
+             }
+             .main-content {
+                 width: 100%;
+                 height: 260vh;
+             }
+             #main {
+                 width: 95vw;
+                 left: 0;
+             }
+
+             /*
+#crausole,#latest-releases, #artist, #Occasional-song, #latest-section,#playlist-ss, #songs-of-choice{
+    width: 80%;
+    left: 10%;
+    margin: 0;
+}  */
+         }
+         /* Scroll bar stylling this wont support for firefox and safari*/
+
+     
+          
+            
+          
+          /* Demonstrate a "mostly customized" scrollbar
+           * (won't be visible otherwise if width/height is specified) */
+     ::-webkit-scrollbar {
+            width: 5px;
+            height: 8px;
+            position: relative;
+            top: 2vh;
+            background-color: transparent; /* or add it to the track */
+          }
+          
+          /* Add a thumb */
+           ::-webkit-scrollbar-thumb {
+            background: whitesmoke;
+          }
+
+
+/* AUDIO PLAYER */
+

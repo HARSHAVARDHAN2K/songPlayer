@@ -1,0 +1,135 @@
+*{
+    color: white;
+}
+.contain{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    position: relative;
+    top: 10vh;
+    height: 150vh;
+}
+
+#artist-playlist{
+    height: 100%;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+
+#jumbotron{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    background-image: url('./source/images/poster/lucas-kapla-GAM-7l4QzmI-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#jumbotron img{
+height: 100%;
+width: 50%;
+
+}
+.artist-details{
+    width: 45%;
+    height: 100%;
+}
+.fa-plus:hover{
+    color: blueviolet;
+    font-size: 25px;
+}
+
+#jumbotron .artist-details p{
+width: 90%;
+text-align: justify;
+align-items: center;
+margin-left: 5%;
+margin-top: 15%;
+}
+
+#simillar-artist{
+    width: 35vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+button{
+    background-color: blueviolet;
+    padding: 5px;
+    outline: none;
+    border-radius: 25px;
+
+}
+
+  .other-songs{
+      min-height: 50vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      align-content: space-around;
+      position: relative;
+      overflow: scroll;
+  }
+
+  .artist-songs{
+      width: 80%;
+      height: 10vh;
+      background-color: black;
+      margin: 10px;
+  }
+  
+.fa-plus{
+    position: relative;
+    right: 2%;
+}
+
+button{
+    position: relative;
+    left: 10px;
+}
+
+  @media only screen and (max-width: 992px) {
+      .contain{
+          display: flex;
+          flex-direction: column;
+          height: 250vh;
+      }
+      #artist-playlist,
+      #simillar-artist{
+          width: 90%;
+          margin-bottom: 10px;
+      }
+      .h{
+          text-align: center;
+
+      }
+      #jumbotron{
+          height: 40vh;
+      }
+
+      #jumbotron p{
+          height: 45%;
+          overflow: scroll;
+      }
+      .advert{
+          width: 50%;
+      }
+  }
